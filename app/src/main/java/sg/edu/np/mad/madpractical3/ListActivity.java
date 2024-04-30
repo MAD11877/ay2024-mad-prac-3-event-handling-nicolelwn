@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,12 +34,13 @@ public class ListActivity extends AppCompatActivity {
         builder.setMessage("MADness");
         builder.setPositiveButton("View", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // Do something when "Yes" is clicked
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
+                startActivity(intent); // do something when view is clicked
             }
         });
         builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // Do something when "No" is clicked
+                // do something when close is clicked
             }
         });
         AlertDialog alertDialog = builder.create();
