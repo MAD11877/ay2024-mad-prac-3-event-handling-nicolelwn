@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 String buttonText = btnFollow.getText().toString();
 
                 if (buttonText.equals("FOLLOW")) {
-                    btnFollow.setText("UNFOLLOW");
+                    btnFollow.setText("Unfollow");
                     Toast t = Toast.makeText(getApplicationContext(), "Followed", Toast.LENGTH_LONG);
                     t.show();
                 } else {
-                    btnFollow.setText("FOLLOW");
+                    btnFollow.setText("Follow");
                     Toast t = Toast.makeText(getApplicationContext(), "Unfollowed", Toast.LENGTH_LONG);
                     t.show();
                 }
