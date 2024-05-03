@@ -63,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Set OnClickListener for the "Message" button
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Launch MessageGroup activity
+                Intent intent = new Intent(MainActivity.this, MessageGroup.class);
+                startActivity(intent);
+            }
+        });
     }
     private String generateRandomNumber() {
         Random random = new Random();
