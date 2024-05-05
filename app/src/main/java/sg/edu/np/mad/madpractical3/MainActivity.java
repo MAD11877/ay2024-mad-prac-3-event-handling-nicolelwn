@@ -31,29 +31,31 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        User user = new User("John Doe", "MAD Developer",1,false);
+        String userName = "MAD " + generateRandomNumber(); // Combine "MAD" with the random number
 
-        TextView tvName = findViewById(R.id.textView); 
-        TextView tvDescription = findViewById(R.id.textView1); 
+        User user = new User(userName, "MAD Developer",1,false);
+
+        TextView tvName = findViewById(R.id.textView);
+        TextView tvDescription = findViewById(R.id.textView1);
         Button btnFollow = findViewById(R.id.button1);
 
         tvName.setText(user.name);
         tvDescription.setText(user.description);
-        btnFollow.setText("FOLLOW");
+        btnFollow.setText("Follow");
 
         btnFollow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String buttonText = btnFollow.getText().toString();
 
-                if (buttonText.equals("FOLLOW")) {
+                if (buttonText.equals("Follow")) {
                     btnFollow.setText("Unfollow");
-                    Toast t = Toast.makeText(getApplicationContext(), "Followed", Toast.LENGTH_LONG);
+                    Toast t = Toast.makeText(MainActivity.this, "Followed", Toast.LENGTH_LONG);
                     t.show();
 
                 } else {
-                    btnFollow.setText("FOLLOW");
-                    Toast t = Toast.makeText(getApplicationContext(), "Unfollowed", Toast.LENGTH_LONG);
+                    btnFollow.setText("Follow");
+                    Toast t = Toast.makeText(MainActivity.this, "Unfollowed", Toast.LENGTH_LONG);
                     t.show();
 
                 }

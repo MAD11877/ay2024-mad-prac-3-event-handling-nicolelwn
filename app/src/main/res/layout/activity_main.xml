@@ -72,7 +72,7 @@
         android:id="@+id/button1"
         android:layout_width="20mm"
         android:layout_height="8mm"
-        android:text="FOLLOW"
+        android:text="Follow"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
